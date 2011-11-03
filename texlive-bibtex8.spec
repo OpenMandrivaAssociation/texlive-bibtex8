@@ -1,3 +1,9 @@
+# revision 18835
+# category TLCore
+# catalog-ctan /biblio/bibtex/8-bit
+# catalog-date 2009-11-09 14:03:25 +0100
+# catalog-license gpl
+# catalog-version 3.71
 Name:		texlive-bibtex8
 Version:	3.71
 Release:	1
@@ -56,6 +62,7 @@ configuration file. Various examples are included.
 %doc %{_texmfdir}/doc/bibtex8/HISTORY
 %doc %{_texmfdir}/doc/bibtex8/csfile.txt
 %doc %{_texmfdir}/doc/bibtex8/file_id.diz
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -66,3 +73,5 @@ configuration file. Various examples are included.
 %install
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
