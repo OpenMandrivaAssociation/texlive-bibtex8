@@ -18,8 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-bibtex8.bin
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 An enhanced, portable C version of BibTeX. Enhanced by
@@ -28,20 +26,12 @@ selectable capacity and 8-bit support extensions. National
 character set and sorting order are controlled by an external
 configuration file. Various examples are included.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -63,7 +53,6 @@ configuration file. Various examples are included.
 %doc %{_texmfdir}/doc/bibtex8/HISTORY
 %doc %{_texmfdir}/doc/bibtex8/csfile.txt
 %doc %{_texmfdir}/doc/bibtex8/file_id.diz
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -74,5 +63,3 @@ configuration file. Various examples are included.
 %install
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
