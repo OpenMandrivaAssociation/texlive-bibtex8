@@ -63,3 +63,18 @@ configuration file. Various examples are included.
 %install
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.71-2
++ Revision: 749694
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.71-1
++ Revision: 717940
+- texlive-bibtex8
+- texlive-bibtex8
+- texlive-bibtex8
+- texlive-bibtex8
+- texlive-bibtex8
+
