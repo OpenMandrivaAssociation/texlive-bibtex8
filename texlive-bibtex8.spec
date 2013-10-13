@@ -1,12 +1,12 @@
-# revision 18835
+# revision 29725
 # category TLCore
 # catalog-ctan /biblio/bibtex/8-bit
-# catalog-date 2009-11-09 14:03:25 +0100
+# catalog-date 2012-04-27 15:08:24 +0200
 # catalog-license gpl
 # catalog-version 3.71
 Name:		texlive-bibtex8
 Version:	3.71
-Release:	2
+Release:	3
 Summary:	A fully 8-bit adaptation of BibTeX 0.99
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/8-bit
@@ -49,10 +49,10 @@ configuration file. Various examples are included.
 %{_texmfdistdir}/bibtex/csf/polish-csf/cp1250pl.csf
 %{_texmfdistdir}/bibtex/csf/polish-csf/cp852pl.csf
 %{_texmfdistdir}/bibtex/csf/polish-csf/iso8859-7.csf
-%doc %{_texmfdir}/doc/bibtex8/00readme.txt
-%doc %{_texmfdir}/doc/bibtex8/HISTORY
-%doc %{_texmfdir}/doc/bibtex8/csfile.txt
-%doc %{_texmfdir}/doc/bibtex8/file_id.diz
+%doc %{_texmfdistdir}/doc/bibtex8/00readme.txt
+%doc %{_texmfdistdir}/doc/bibtex8/HISTORY
+%doc %{_texmfdistdir}/doc/bibtex8/csfile.txt
+%doc %{_texmfdistdir}/doc/bibtex8/file_id.diz
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,19 +62,4 @@ configuration file. Various examples are included.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.71-2
-+ Revision: 749694
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.71-1
-+ Revision: 717940
-- texlive-bibtex8
-- texlive-bibtex8
-- texlive-bibtex8
-- texlive-bibtex8
-- texlive-bibtex8
-
+cp -fpar texmf-dist %{buildroot}%{_datadir}
