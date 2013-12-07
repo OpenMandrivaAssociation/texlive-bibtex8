@@ -6,7 +6,7 @@
 # catalog-version 3.71
 Name:		texlive-bibtex8
 Version:	3.71
-Release:	6
+Release:	7
 Summary:	A fully 8-bit adaptation of BibTeX 0.99
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/8-bit
