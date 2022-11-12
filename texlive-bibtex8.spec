@@ -5,8 +5,8 @@ Summary:	A fully 8-bit adaptation of BibTeX 0.99
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/8-bit
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.r64491.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.doc.r64491.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
