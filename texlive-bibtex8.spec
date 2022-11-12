@@ -1,18 +1,12 @@
-# revision 29725
-# category TLCore
-# catalog-ctan /biblio/bibtex/8-bit
-# catalog-date 2012-04-27 15:08:24 +0200
-# catalog-license gpl
-# catalog-version 3.71
 Name:		texlive-bibtex8
-Version:	3.71
-Release:	12
+Version:	64491
+Release:	1
 Summary:	A fully 8-bit adaptation of BibTeX 0.99
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/8-bit
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.r64491.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.doc.r64491.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ character set and sorting order are controlled by an external
 configuration file. Various examples are included.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -53,10 +47,11 @@ configuration file. Various examples are included.
 %doc %{_texmfdistdir}/doc/bibtex8/HISTORY
 %doc %{_texmfdistdir}/doc/bibtex8/csfile.txt
 %doc %{_texmfdistdir}/doc/bibtex8/file_id.diz
+%doc %{_texmfdistdir}/doc/man/man1/*
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
