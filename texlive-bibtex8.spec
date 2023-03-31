@@ -1,6 +1,6 @@
 Name:		texlive-bibtex8
 Version:	64491
-Release:	1
+Release:	2
 Summary:	A fully 8-bit adaptation of BibTeX 0.99
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/8-bit
