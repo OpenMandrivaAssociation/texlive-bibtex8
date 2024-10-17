@@ -3,7 +3,7 @@ Version:	64491
 Release:	2
 Summary:	A fully 8-bit adaptation of BibTeX 0.99
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/8-bit
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/8-bit
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibtex8.doc.r%{version}.tar.xz
